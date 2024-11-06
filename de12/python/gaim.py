@@ -10,19 +10,19 @@ player = {
 
 # ゲームの開始
 def start_game():
-    print("Welcome to the Adventure Game!")
-    player["name"] = input("What is your name, brave adventurer? ")
-    print(f"Hello, {player['name']}! Your adventure begins now!")
+    print("ようこそ冒険者の皆さん！")
+    player["name"] = input("あなたの名前は何ですか？")
+    print(f"こんにちは、 {player['name']}! 冒険の始まりだ！")
     time.sleep(1)
     first_choice()
 
 # 最初の選択肢
 def first_choice():
-    print("\nYou find yourself at the entrance of a dark forest.")
-    print("1. Enter the forest")
-    print("2. Walk along the edge of the forest")
+    print("\nあなたは今暗い森の入り口に立っています")
+    print("1. 堂々と突き進む")
+    print("2. 道に沿って端を歩く")
     
-    choice = input("What will you do? (1/2): ")
+    choice = input("どれを選ぶ？(1/2): ")
     
     if choice == "1":
         enter_forest()
