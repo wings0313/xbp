@@ -29,62 +29,62 @@ def first_choice():
     elif choice == "2":
         walk_along_edge()
     else:
-        print("Invalid choice. Please choose again.")
+        print("もう一度選んでね.")
         first_choice()
 
 # 森の中に入る
 def enter_forest():
-    print("\nYou bravely enter the forest, but it's eerily quiet.")
+    print("\nあなたは勇敢に森へ入りますが、そこは不気味で静かです.")
     time.sleep(1)
-    print("Suddenly, a wild wolf appears!")
-    print("1. Fight the wolf")
-    print("2. Run away")
+    print("あなたは暗い森の入り口にオオカミがいることに気が付きます!")
+    print("1. オオカミと戦う")
+    print("2. 逃げる")
     
-    choice = input("What will you do? (1/2): ")
+    choice = input("どれを選ぶ？ (1/2): ")
     
     if choice == "1":
         fight_wolf()
     elif choice == "2":
         run_away()
     else:
-        print("Invalid choice. Please choose again.")
+        print("もう一度選んでね.")
         enter_forest()
 
 # 森の端を歩く
 def walk_along_edge():
-    print("\nYou walk along the edge of the forest, avoiding any dangers inside.")
+    print("\n道の端を沿って歩い、危険から免れる.")
     time.sleep(1)
-    print("After a while, you find a small village. You decide to rest there.")
+    print("しばらくすると、そこに小さな村があることに気が付く.")
     end_game()
 
 # オオカミと戦う
 def fight_wolf():
-    print("\nYou decide to fight the wolf!")
+    print("\nオオカミと戦うことに決めた!")
     time.sleep(1)
     if player["strength"] >= 10:
-        print("You swing your sword and defeat the wolf!")
-        player["inventory"].append("Wolf Pelt")
-        print("You have obtained a Wolf Pelt.")
+        print("券を振り、オオカミを倒せ!")
+        player["inventory"].append("オオカミの毛皮")
+        print("あなたはオオカミの毛皮を手に入れた.")
     else:
-        print("The wolf is too strong! You are injured.")
+        print("オオカミが強すぎる、あなたはけがをした.")
         player["health"] -= 20
     time.sleep(1)
     end_game()
 
 # 逃げる
 def run_away():
-    print("\nYou run away from the wolf, escaping back to safety.")
+    print("\nオオカミから逃げ、あなたは安全たところにたどり着く.")
     time.sleep(1)
     end_game()
 
 # ゲーム終了
 def end_game():
-    print("\nYour adventure has come to an end.")
+    print("\nあなたの冒険はこれでおわり.")
     print(f"Final stats for {player['name']}:")
     print(f"Health: {player['health']}")
     print(f"Strength: {player['strength']}")
     print(f"Inventory: {player['inventory']}")
-    print("Thank you for playing!")
+    print("プレイしてくれてありがとう!")
 
 # ゲームを開始する
 start_game()
